@@ -483,15 +483,61 @@ btnSort.addEventListener('click', function (e) {
 
 
 
-labelBalance.addEventListener('click', () => {
+// labelBalance.addEventListener('click', () => {
 
-  // Example - 1
-  // const movementsUI = Array.from(document.querySelectorAll('.movements__value'));
-  // console.log(movementsUI.map(el => Number(el.textContent.replace('€', ""))));
+// Example - 1
+// const movementsUI = Array.from(document.querySelectorAll('.movements__value'));
+// console.log(movementsUI.map(el => Number(el.textContent.replace('€', ""))));
 
-  // Example - 2
-  // NOTE: Arrays.from(condition to make array, mapping call back)
-  const movementsUI = Array.from(document.querySelectorAll('.movements__value'),
-    (el => Number(el.textContent.replace('€', ""))));
-  console.log(movementsUI);
-})
+// Example - 2
+// NOTE: Arrays.from(condition to make array, mapping call back)
+//   const movementsUI = Array.from(document.querySelectorAll('.movements__value'),
+//     (el => Number(el.textContent.replace('€', ""))));
+//   console.log(movementsUI);
+// })
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+// Coding Challenge - 4
+
+// const dogs = [
+//   { weight: 22, curFood: 250, owners: ['Alice', 'Bob'] },
+//   { weight: 8, curFood: 200, owners: ['Matilda'] },
+//   { weight: 13, curFood: 275, owners: ['Sarah', 'John'] },
+//   { weight: 32, curFood: 340, owners: ['Michael'] },
+// ];
+
+
+// dogs.forEach(function (curr, i, arr) {
+//   curr.recommendedFood = Math.trunc(curr.weight ** 0.75 * 28)
+//   // console.log(curr);
+// })
+
+// console.log(dogs);
+// const sarahDog = dogs.find(curr => curr.owners.includes('Sarah'))
+// console.log(`Sharah's Dog is Eating ${sarahDog.curFood >= sarahDog.recommendedFood ? "Too much" : "Too little"}`);
+
+// const ownersEatTooMuch = dogs
+//   .filter(obj => obj.curFood > obj.recommendedFood)
+//   .flatMap(obj => obj.owners)
+// // .flat()
+// console.log(ownersEatTooMuch);
+// const ownersEatTooLittle = dogs
+//   .filter(obj => obj.curFood < obj.recommendedFood)
+//   .flatMap(obj => obj.owners)
+// // .flat()
+// console.log(ownersEatTooLittle);
+
+// console.log(`${ownersEatTooMuch.join(' and ')}'s dog eat too much !!`);
+// console.log(`${ownersEatTooLittle.join(' and ')}'s dog eat too much !!`);
+
+// console.log("whether there is any dog eating exactly the amount of food => ", dogs.some(obj => obj.curFood === obj.recommendedFood))
+// console.log("whether there is any dog eating okey the amount of food => ", dogs.some(obj => obj.curFood > obj.recommendedFood * 0.9 && obj.curFood < obj.recommendedFood * 1.1))
+
+// const okeyFoodDogs = dogs.filter(obj => obj.curFood > obj.recommendedFood * 0.9 && obj.curFood < obj.recommendedFood * 1.1)
+
+// console.log(okeyFoodDogs);
+
+// const copyDogs = [...dogs]
+// copyDogs.sort((a, b) => (a.recommendedFood - b.recommendedFood))
+// console.log(copyDogs);
