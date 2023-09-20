@@ -315,20 +315,24 @@ btnSort.addEventListener('click', function (e) {
 
 // Coding Challenge - 1
 
-// const dogsJulia = [3, 5, 2, 12, 7]
-// const dogsKate = [4, 1, 15, 8, 3]
+const dogsJulia = [3, 5, 2, 12, 7]
+const dogsKate = [4, 1, 15, 8, 3]
 
-// function checkDogs(dogs1, dogs2) {
+console.log(dogsJulia.splice(1, 2));
+console.log(dogsJulia);
 
-//   const copyDogs1 = [...dogs1].splice(1, 2)
-//   const allDogs = [...copyDogs1, ...dogs2]
-//   // console.log(allDogs);
-//   allDogs.forEach(function (x, i) {
-//     x >= 3 ?
-//       console.log(`Dog number ${i + 1} is an adult, and is ${x} years old`) :
-//       console.log(`Dog number ${i + 1} is still a puppy`);
-//   })
-// }
+function checkDogs(dogs1, dogs2) {
+
+  const copyDogs1 = dogs1.splice(1, 2);
+  console.log(copyDogs1);
+  const allDogs = [...copyDogs1, ...dogs2]
+  // console.log(allDogs);
+  allDogs.forEach(function (x, i) {
+    x >= 3 ?
+      console.log(`Dog number ${i + 1} is an adult, and is ${x} years old`) :
+      console.log(`Dog number ${i + 1} is still a puppy`);
+  })
+}
 
 // checkDogs(dogsJulia, dogsKate)
 
@@ -447,8 +451,8 @@ btnSort.addEventListener('click', function (e) {
 
 /////////////////////////////////////////////////////////////////////////////////
 
-// const arr = [[[1, 2], 3], [[4], 5], 6, 7];
-// // console.log(arr.flat())
+const arr = [[[1, 2], 3], [[4], 5], 6, 7];
+console.log(arr.flat())
 
 // const totalBalanceInAllAccounts =
 //   accounts
